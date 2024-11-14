@@ -11,7 +11,7 @@ const Login = () => {
         try {
             const response = await axios.post('http://localhost:8080/login', { username, password });
             localStorage.setItem('token', response.data.token);
-            navigate('/dashboard');
+            navigate('/categoria');
         } catch (error) {
             alert('Login failed');
         }
